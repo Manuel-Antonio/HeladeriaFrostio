@@ -6,7 +6,7 @@ import {LottiesPendiente} from "@/components/Lotties";
 
 export default function Admin() {
 
-    const fetcher = () => axios("http://localhost:3000/api/ordenes").then(datos => datos.data);
+    const fetcher = () => axios("/api/ordenes").then(datos => datos.data);
 
     const {data, error, isLoading} = useSWR("/api/ordenes", fetcher, {refreshInterval:300}); 
 

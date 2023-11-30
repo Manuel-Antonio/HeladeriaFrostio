@@ -6,7 +6,7 @@ import { LottiesCompletado} from "@/components/Lotties";
 
 export default function Completados() {
   const fetcher = () =>
-    axios("http://localhost:3000/api/completado").then((datos) => datos.data);
+    axios("/api/completado").then((datos) => datos.data);
 
   const { data} = useSWR("/api/completado", fetcher, {
     refreshInterval: 100,
